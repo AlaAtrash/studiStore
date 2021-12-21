@@ -1,13 +1,11 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatButtonToggleModule} from '@angular/material/button-toggle';
-
-
+import { ProductsModule } from './products/products.module'
 
 @NgModule({
   declarations: [
@@ -18,7 +16,8 @@ import {MatButtonToggleModule} from '@angular/material/button-toggle';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MatButtonToggleModule
+    MatButtonToggleModule,
+    ProductsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
