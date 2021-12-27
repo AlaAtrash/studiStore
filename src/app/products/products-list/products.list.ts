@@ -1,0 +1,47 @@
+export const products = [
+ {
+    id: 1,
+    name: 'a',
+    img:'',
+    description: '',
+    price:'',
+    ref: '',
+    age: '',
+ },
+ {
+    id: 2,
+    name: 'b',
+    img:'',
+    description: '',
+    price:'',
+    ref: '',
+    age: ''
+ },
+ {
+    id: 3,
+    name: 'c',
+    img:'',
+    description: '',
+    price:'',
+    ref: '',
+    age: '',
+ },
+ {
+    id: 3,
+    name: 'd',
+    img:'',
+    description: '',
+    price:'',
+    ref: '',
+    age: '',
+ },
+ {
+    id: 1,
+    name: '',
+    img:'',
+    description: '',
+    price:'',
+    ref: '',
+    age: '',
+ },
+]
