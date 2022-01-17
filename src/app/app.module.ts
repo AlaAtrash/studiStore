@@ -6,6 +6,7 @@ import { WelcomeComponent } from './welcome/welcome.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatButtonToggleModule} from '@angular/material/button-toggle';
 import { ProductsModule } from './products/products.module'
+import {MatListModule} from '@angular/material/list';
 
 @NgModule({
   declarations: [
@@ -13,6 +14,7 @@ import { ProductsModule } from './products/products.module'
     WelcomeComponent
   ],
   imports: [
+    MatListModule,
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
