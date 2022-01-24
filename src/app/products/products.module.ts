@@ -4,6 +4,7 @@ import { ProductsListComponent } from './products-list/products-list.component';
 import {MatTableModule} from '@angular/material/table';
 import {MatButtonModule} from '@angular/material/button';
 import { DecimalPipePipe } from './decimal-pipe.pipe';
+import { ToCommaPipe } from './to-comma.pipe';
 
 
 
@@ -11,7 +12,8 @@ import { DecimalPipePipe } from './decimal-pipe.pipe';
 @NgModule({
   declarations: [
     ProductsListComponent,
-    DecimalPipePipe
+    DecimalPipePipe,
+    ToCommaPipe
   ],
   imports: [
     CommonModule,
