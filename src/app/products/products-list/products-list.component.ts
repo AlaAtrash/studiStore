@@ -8,8 +8,9 @@ import { products } from './products.list'
 })
 export class ProductsListComponent implements OnInit {
 
-  productsList: any
-  displayedColumns: string[] = ['name', 'img', 'description', 'price', 'age', 'ref'];
+
+  productsList = products
+  displayedColumns: string[] = ['name', 'img', 'description', 'price', 'age', 'ref', 'details'];
   constructor() { }
 
   cutDescription(description: string) {
