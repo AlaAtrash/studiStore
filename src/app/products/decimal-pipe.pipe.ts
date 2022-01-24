@@ -5,8 +5,8 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class DecimalPipePipe implements PipeTransform {
 
-  transform(value: string): number {
-    return parseFloat(value.replace(',', '.'));
+  transform(value: string, char:string): string {
+    return `${value}${char}`;
   }
 
 }
