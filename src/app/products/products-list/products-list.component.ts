@@ -10,7 +10,7 @@ export class ProductsListComponent implements OnInit {
 
 
   productsList = products
-  displayedColumns: string[] = ['name', 'img', 'description', 'price', 'age', 'ref'];
+  displayedColumns: string[] = ['name', 'img', 'description', 'price', 'age', 'ref', 'details'];
   constructor() { }
 
   ngOnInit(): void {
