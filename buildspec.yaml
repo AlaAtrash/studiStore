@@ -1,0 +1,33 @@
+version: 0.2
+
+env:
+  variables:
+    S3_BUCKET: 'studi-store'
+    BUILD_ENV: 'prod'
+
+phases:
+  install:
+    commands:
+      - npm install -g @angular/cli
+    runtime-versions:
+      nodejs: 10
+  pre_build:
+    commands:
+      - npm install
+  build:
+    commands:
+      - echo Build started on `date`
+      - npm run build:ci
+  post_build:
+    commands:
+    # Clear S3 bucket.
+    #- aws s3 rm s3://${S3_BUCKET} --recursive
+    #- echo S3 bucket is cleared.
+    # Copy dist folder to S3 bucket, As of Angular 6, builds are stored inside an app folder in distribution and not at the root of the dist folder
+    #- aws s3 cp dist s3://${S3_BUCKET} --recursive
+    #- echo Build completed on `date`
+artifacts:
+  files:
+    - '**/*'
+  discard-paths: yes
+  base-directory: 'dist*'
