@@ -17,7 +17,7 @@ phases:
   build:
     commands:
       - echo Build started on `date`
-      - npm run ng build
+      - ng build
   post_build:
     commands:
     # Clear S3 bucket.
