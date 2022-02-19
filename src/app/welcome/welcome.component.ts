@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AppService } from '../app.service'
 
 @Component({
   selector: 'studi-welcome',
@@ -7,7 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class WelcomeComponent implements OnInit {
 
-  constructor() { }
+  constructor(private readonly appService:AppService) { }
+
+  sayHelloWorld() {
+    this.appService.getHelloWorld().subscribe((data) => alert(data.text))
+  }
+
 
   ngOnInit(): void {
   }
