@@ -11,7 +11,7 @@ phases:
     commands:
       - npm install -g @angular/cli
     runtime-versions:
-      nodejs: 12
+      nodejs: 14
   pre_build:
     commands:
       - npm install
