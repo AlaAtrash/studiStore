@@ -4,7 +4,6 @@ env:
   variables:
       CACHE_CONTROL: "86400"
       S3_BUCKET: "studi-store"
-      BUILD_FOLDER: {-INSERT THE NAME OF THE BUILD FOLDER HERE-}
       BUILD_ENV: "production"
 
 phases:
