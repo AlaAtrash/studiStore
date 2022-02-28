@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { products } from './products.list'
+import {ProductsService } from './product.service'
 
 @Component({
   selector: 'studi-products-list',
@@ -8,26 +8,24 @@ import { products } from './products.list'
 })
 export class ProductsListComponent implements OnInit {
 
-
-  productsList = products
+  productsList= []
   displayedColumns: string[] = ['name', 'img', 'description', 'price', 'age', 'ref', 'details'];
-  constructor() { }
+  constructor(private readonly productsService: ProductsService) { }
 
   cutDescription(description: string) {
     return description.substr(0, 100)
   }
 
+  /*
   getProducts() {
     for(let product of this.productsList) {
       product.description= this.cutDescription(product.description)
     }
-  }
+  }*/
 
   ngOnInit(): void {
-    //TODO LIST OF PRODUCTS TO RETRIVE FROM NODEJS
-    // THIS IS ONLY A MOCK
-    this.productsList = products
-    this.getProducts()
+    this.productsService.getProducts().subscribe(
+      (products) => this.productsList = products)
   }
 
 }
