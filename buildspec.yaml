@@ -9,7 +9,7 @@ env:
 phases:
   install:
     commands:
-      - npm install -g @angular/cli
+      - npm install -g @angular/cli@11.2.2
     runtime-versions:
       nodejs: 18.10.0
   pre_build:
